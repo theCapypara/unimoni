@@ -1,0 +1,18 @@
+{
+  "name": "unimoni",
+  "type": "es6",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "author": "Parakoopa",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node index.ts"
+  },
+  "dependencies": {
+    "@uniswap/v3-sdk": "^3.2.0",
+    "coinmarketcap-api": "^3.1.1",
+    "ethers": "^5.4.1",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.5"
+  }
+}
