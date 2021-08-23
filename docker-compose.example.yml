@@ -7,5 +7,6 @@ services:
       CMC_API_KEY: ...
       COMPARE_TOKEN: EUR
       FILE: /unipools.txt
+    restart: on-failure
     volumes:
       - "/var/www/html/unipools.txt:/unipools.txt"

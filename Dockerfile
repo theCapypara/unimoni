@@ -4,4 +4,4 @@ ADD package.json .
 RUN npm install
 ADD . .
 
-CMD ["npm", "run", "start"]
+CMD ["npm", "run", "start", "--", "--unhandled-rejections=strict"]
