@@ -21,7 +21,7 @@ export class TokenReferenceResolver {
     }
 
     public async getQuote(token: Token): Promise<number> {
-        if (!quoteCache[token.symbol] || (Date.now() - quoteCache[token.symbol][0]) > 7200) {
+        if (!quoteCache[token.symbol] || (Date.now() - quoteCache[token.symbol][0]) > 1800000) {
             const cmcToken = await this._cmc.getQuotes({symbol: token.symbol, convert: this.referencedToken});
             quoteCache[token.symbol] = [Date.now(), cmcToken.data[token.symbol].quote[this.referencedToken].price];
         }
